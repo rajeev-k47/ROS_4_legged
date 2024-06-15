@@ -1,0 +1,28 @@
+[0.010s] Invoking command in '/home/rajeev/OneDrive/CODING/ROS/lg/build/lg_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rajeev/turtle/install/turtlebot3_teleop:/home/rajeev/turtle/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/rajeev/OneDrive/CODING/ROS/lg/src/lg-robot -DCMAKE_INSTALL_PREFIX=/home/rajeev/OneDrive/CODING/ROS/lg/install/lg_robot
+[0.141s] -- The C compiler identification is GNU 11.4.0
+[0.262s] -- The CXX compiler identification is GNU 11.4.0
+[0.279s] -- Detecting C compiler ABI info
+[0.370s] -- Detecting C compiler ABI info - done
+[0.379s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.379s] -- Detecting C compile features
+[0.380s] -- Detecting C compile features - done
+[0.384s] -- Detecting CXX compiler ABI info
+[0.459s] -- Detecting CXX compiler ABI info - done
+[0.466s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.466s] -- Detecting CXX compile features
+[0.467s] -- Detecting CXX compile features - done
+[0.471s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.589s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.683s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.746s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[0.746s]   ament_package_xml() package name 'lg_robot' in '/package.xml' does not
+[0.746s]   match current PROJECT_NAME 'lg-robot'.  You must call project() with the
+[0.746s]   same package name before.
+[0.747s] Call Stack (most recent call first):
+[0.747s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.747s]   CMakeLists.txt:18 (ament_lint_auto_find_test_dependencies)
+[0.747s] 
+[0.747s] [0m
+[0.747s] -- Configuring incomplete, errors occurred!
+[0.747s] See also "/home/rajeev/OneDrive/CODING/ROS/lg/build/lg_robot/CMakeFiles/CMakeOutput.log".
+[0.750s] Invoked command in '/home/rajeev/OneDrive/CODING/ROS/lg/build/lg_robot' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rajeev/turtle/install/turtlebot3_teleop:/home/rajeev/turtle/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/rajeev/OneDrive/CODING/ROS/lg/src/lg-robot -DCMAKE_INSTALL_PREFIX=/home/rajeev/OneDrive/CODING/ROS/lg/install/lg_robot

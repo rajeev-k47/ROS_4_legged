@@ -1,0 +1,4 @@
+source;share/lg-robot/local_setup.bash
+source;share/lg-robot/local_setup.dsv
+source;share/lg-robot/local_setup.sh
+source;share/lg-robot/local_setup.zsh

@@ -1,0 +1,8 @@
+source;share/lg-robot/hook/cmake_prefix_path.ps1
+source;share/lg-robot/hook/cmake_prefix_path.dsv
+source;share/lg-robot/hook/cmake_prefix_path.sh
+source;share/lg-robot/local_setup.bash
+source;share/lg-robot/local_setup.dsv
+source;share/lg-robot/local_setup.ps1
+source;share/lg-robot/local_setup.sh
+source;share/lg-robot/local_setup.zsh

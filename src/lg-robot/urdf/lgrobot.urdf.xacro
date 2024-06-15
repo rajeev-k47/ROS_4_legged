@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lg-robot">
+
+    <xacro:property name="PI" value="3.14159"/>
+    <xacro:property name="effort" value="30.0"/>
+    <xacro:property name="velocity" value="10.0"/>
+
+    <xacro:macro name="default_inertial" params="mass" >
+        <inertial>
+            <mass value="${mass}" />
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0"  izz="1.0"  />
+        </inertial>
+    </xacro:macro>
+
+    <link name="world"/>
+    //===============base============//
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.3" rpy="0.0 0.0 0.0"/>
+            
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/body.stl" scale="0.01 0.01 0.01"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="virtual_joint" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    //============leg-00===========//
+    <link name="leg-00">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg00" type="revolute">
+        <parent link="base_link"/>
+        <child link="leg-00"/>
+        <axis xyz="0 1 0"/>
+        <origin rpy="0 -0.3 0" xyz="-0.25 -0.4 0.4"/>
+        <limit lower="-${PI/2}" upper="${PI/2}" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <link name="leg-00-b">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg00b" type="revolute">
+        <parent link="leg-00"/>
+        <child link="leg-00-b"/>
+        <axis xyz="0 1 0"/>
+        <origin rpy=" 0 0 0" xyz="0.1 0.015 -0.25"/>
+        <limit lower="-0.666" upper="0.212" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    //========leg-01=============//
+
+
+    <link name="leg-01">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg01" type="revolute">
+        <parent link="base_link"/>
+        <child link="leg-01"/>
+        <axis xyz="0 1 0"/>
+        <origin rpy="0 -0.3 0" xyz="0.25 -0.4 0.4"/>
+        <mimic joint="joint_leg00" multiplier="-1"/>
+        <limit lower="-${PI/2}" upper="${PI/2}" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <link name="leg-01-b">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg01b" type="revolute">
+        <parent link="leg-01"/>
+        <child link="leg-01-b"/>
+        <axis xyz="0 1 0"/>
+        <origin rpy=" 0 0 0" xyz="0.1 0.015 -0.25"/>
+        <mimic joint="joint_leg00b" multiplier="-1"/>
+        <limit lower="-0.666" upper="0.212" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    //========leg-10=============//
+
+
+    <link name="leg-10">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg10" type="revolute">
+        <parent link="base_link"/>
+        <child link="leg-10"/>
+        <axis xyz="0 1 0"/>
+        <origin rpy="0 -0.3 0" xyz="-0.25 0.4 0.4"/>
+        <mimic joint="joint_leg01" multiplier="1"/>
+        <limit lower="-${PI/2}" upper="${PI/2}" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <link name="leg-10-b">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg10b" type="revolute">
+        <parent link="leg-10"/>
+        <child link="leg-10-b"/>
+        <axis xyz="0 1 0"/>
+        <mimic joint="joint_leg01b" multiplier="1"/>
+        <origin rpy=" 0 0 0" xyz="0.1 -0.035 -0.25"/>
+        <limit lower="-0.666" upper="0.212" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+
+    //========leg-11=============//
+
+
+    <link name="leg-11">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 1 0" xyz="0 0 0"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_top.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg11" type="revolute">
+        <parent link="base_link"/>
+        <child link="leg-11"/>
+        <axis xyz="0 1 0"/>
+        <mimic joint="joint_leg00" multiplier="1"/>
+        <origin rpy="0 -0.3 0" xyz="0.25 0.4 0.4"/>
+        <limit lower="-${PI/2}" upper="${PI/2}" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <link name="leg-11-b">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 0.1 0" xyz="-0.3 0 0.1"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/leg_bottom.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_leg11b" type="revolute">
+        <parent link="leg-11"/>
+        <child link="leg-11-b"/>
+        <axis xyz="0 1 0"/>
+        <origin rpy=" 0 0 0" xyz="0.1 -0.035 -0.25"/>
+        <mimic joint="joint_leg00b" multiplier="1"/>
+        <limit lower="-0.666" upper="0.212" effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+
+    //===========cover============//
+    <link name="cover">
+        <xacro:default_inertial mass="0.1"/>
+        <visual>
+            <origin rpy="0 0 1.58" xyz="-0.45 0 0.38"/>
+            <geometry>
+                <mesh filename="package://lg-robot/meshes/cover.stl" scale="0.008 0.01 0.008"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 0 1.58" xyz="-0.45 0 0.08"/>
+            <geometry>
+
+                <mesh filename="package://lg-robot/meshes/cover.stl" scale="0.008 0.01 0.008"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_cover" type="fixed">
+        <parent link="base_link"/>
+        <child link="cover"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+
+
+    //============Plugins==========//
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
+
+    
+    <transmission name="trans_joint_leg00">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_leg00">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="actuator_joint_leg00">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    
+
+
+
+</robot>
