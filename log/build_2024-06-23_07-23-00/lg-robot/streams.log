@@ -1,0 +1,41 @@
+[0.013s] Invoking command in '/home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rajeev/turtle/install/turtlebot3_teleop:/home/rajeev/turtle/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot -- -j12 -l12
+[0.042s] Invoked command in '/home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rajeev/turtle/install/turtlebot3_teleop:/home/rajeev/turtle/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot -- -j12 -l12
+[0.067s] Invoking command in '/home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rajeev/turtle/install/turtlebot3_teleop:/home/rajeev/turtle/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot
+[0.074s] -- Install configuration: ""
+[0.075s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes
+[0.075s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/leg_bottom.stl
+[0.075s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/cover_clamp.stl
+[0.075s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/leg_shoes_print_with_flexible.stl
+[0.076s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/legs_holder_part1.stl
+[0.076s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/legs_holder_part2.stl
+[0.076s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/CALIBRATION_LEG-Beta_and_Gamma.stl
+[0.076s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/leg_top.stl
+[0.077s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/shoulder_part1.stl
+[0.077s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/CALIBRATION_LEG-Alpha.stl
+[0.077s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/CALIBRATION_SERVO-10deg.stl
+[0.077s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/servo_gear.stl
+[0.077s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/body.stl
+[0.078s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/cover.stl
+[0.078s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/shoulder_part2.stl
+[0.079s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/urdf
+[0.079s] -- Installing: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/urdf/lgrobot.urdf.xacro
+[0.080s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/launch
+[0.080s] -- Installing: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/launch/gazebo.launch.py
+[0.080s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/config
+[0.081s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/config/lg_robot_controllers.yaml
+[0.081s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/ament_index/resource_index/package_run_dependencies/lg-robot
+[0.081s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/ament_index/resource_index/parent_prefix_path/lg-robot
+[0.082s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/environment/ament_prefix_path.sh
+[0.082s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/environment/ament_prefix_path.dsv
+[0.083s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/environment/path.sh
+[0.083s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/environment/path.dsv
+[0.084s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/local_setup.bash
+[0.084s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/local_setup.sh
+[0.084s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/local_setup.zsh
+[0.085s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/local_setup.dsv
+[0.085s] -- Installing: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/package.dsv
+[0.085s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/ament_index/resource_index/packages/lg-robot
+[0.086s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/cmake/lg-robotConfig.cmake
+[0.086s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/cmake/lg-robotConfig-version.cmake
+[0.088s] -- Up-to-date: /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/package.xml
+[0.088s] Invoked command in '/home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rajeev/turtle/install/turtlebot3_teleop:/home/rajeev/turtle/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/rajeev/OneDrive/CODING/ROS/lg/build/lg-robot

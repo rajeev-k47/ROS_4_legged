@@ -6,7 +6,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 install(
-  DIRECTORY meshes urdf launch
+  DIRECTORY meshes urdf launch config
   DESTINATION share/${PROJECT_NAME}
 )
 # models launch rviz

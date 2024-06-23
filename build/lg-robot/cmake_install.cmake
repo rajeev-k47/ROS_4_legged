@@ -47,6 +47,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/rajeev/OneDrive/CODING/ROS/lg/src/lg-robot/meshes"
     "/home/rajeev/OneDrive/CODING/ROS/lg/src/lg-robot/urdf"
     "/home/rajeev/OneDrive/CODING/ROS/lg/src/lg-robot/launch"
+    "/home/rajeev/OneDrive/CODING/ROS/lg/src/lg-robot/config"
     )
 endif()
 

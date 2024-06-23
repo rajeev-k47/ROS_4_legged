@@ -18,6 +18,8 @@ def generate_launch_description():
 
     env_variable = SetEnvironmentVariable("GAZEBO_MODEL_PATH", model_path)
 
+    # controller=os.path.join(get_package_share_directory("lg-robot"),'config','lg_robot_controllers.yaml')
+
     model_args = DeclareLaunchArgument(
         name="model",
         default_value=os.path.join(get_package_share_directory("lg-robot"), "urdf", "lgrobot.urdf.xacro"),
@@ -44,12 +46,34 @@ def generate_launch_description():
         arguments=["-entity", "lgrobot", "-topic", "robot_description"],
         output="screen"
     )
+    controller_broadCaster= Node(
+          package='controller_manager',
+            executable='spawner',
+            arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
+            output='screen'
+    )
+    controller_Trajectory_Controller=Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=['joint_trajectory_controller', '--controller-manager', '/controller_manager'],
+            output='screen'
+        )
+    # controlling_Unit = Node(
+    #         package='controller_manager',
+    #         executable='ros2_control_node',
+    #         parameters=[controller, {'robot_description': robot_description}],
+    #         output='screen'
+    #     )
 
     return LaunchDescription([
-        env_variable,
-        model_args,
-        robot_state_publisher,
-        start_gazebo_server,
-        start_gazebo_client,
-        spawn_robot
-    ])
+    env_variable,
+    model_args,
+    robot_state_publisher,
+    start_gazebo_server,
+    start_gazebo_client,
+    spawn_robot,
+    # controlling_Unit, 
+    controller_broadCaster,
+    controller_Trajectory_Controller
+])
+

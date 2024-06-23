@@ -14,6 +14,7 @@
 /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/meshes/shoulder_part2.stl
 /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/urdf/lgrobot.urdf.xacro
 /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/launch/gazebo.launch.py
+/home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/config/lg_robot_controllers.yaml
 /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/ament_index/resource_index/package_run_dependencies/lg-robot
 /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/ament_index/resource_index/parent_prefix_path/lg-robot
 /home/rajeev/OneDrive/CODING/ROS/lg/install/lg-robot/share/lg-robot/environment/ament_prefix_path.sh
