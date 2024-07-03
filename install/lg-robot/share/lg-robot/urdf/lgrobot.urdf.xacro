@@ -291,9 +291,7 @@
 
     <ros2_control name="GazeboSystem" type="system">
         <hardware>
-            <plugin>
-                gazebo_ros2_control/GazeboSystem
-            </plugin>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
 
         <joint name="joint_leg00">
@@ -330,7 +328,7 @@
             <state_interface name="velocity"/>
         </joint>
         <joint name="joint_leg10">
-            <param name="mimic">joint_leg01</param>
+            <!-- <param name="mimic">joint_leg01</param> -->
             <param name="multiplier">1</param>
             <command_interface name="position"/>
             <state_interface name="position">
@@ -340,7 +338,7 @@
             <state_interface name="velocity"/>
         </joint>
         <joint name="joint_leg10b">
-            <param name="mimic">joint_leg01b</param>
+            <!-- <param name="mimic">joint_leg01b</param> -->
             <param name="multiplier">1</param>
             <command_interface name="position"/>
             <state_interface name="position">
@@ -350,7 +348,7 @@
             <state_interface name="velocity"/>
         </joint>
         <joint name="joint_leg11">
-            <param name="mimic">joint_leg00</param>
+            <!-- <param name="mimic">joint_leg00</param> -->
             <param name="multiplier">1</param>
             
             <command_interface name="position"/>
@@ -361,7 +359,7 @@
             <state_interface name="velocity"/>
         </joint>
         <joint name="joint_leg11b">
-            <param name="mimic">joint_leg00b</param>
+            <!-- <param name="mimic">joint_leg00b</param> -->
             <param name="multiplier">1</param>
             <command_interface name="position"/>
             <state_interface name="position">
@@ -376,9 +374,9 @@
     </ros2_control>
 
     <gazebo>
-        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
             <parameters>$(find lg-robot)/config/lg_robot_controllers.yaml</parameters>
-            <robot_namespace>/</robot_namespace>
+            <!-- <robot_namespace>/</robot_namespace> -->
         </plugin>
         
     </gazebo>

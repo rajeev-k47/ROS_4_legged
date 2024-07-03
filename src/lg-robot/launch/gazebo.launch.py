@@ -74,6 +74,12 @@ def generate_launch_description():
     spawn_robot,
     # controlling_Unit, 
     controller_broadCaster,
-    controller_Trajectory_Controller
+    controller_Trajectory_Controller,
+    Node(
+            package='controller_manager',
+            executable='ros2_control_node',
+            parameters=['config/lg_robot_controllers.yaml'],
+            output='screen',
+        )
 ])
 
